@@ -12,6 +12,8 @@ function weather() {
     var estatnit = data["DailyForecasts"]["0"]["Night"]["Icon"];
     var fraseestatnit = data["DailyForecasts"]["0"]["Night"]["IconPhrase"];
 
+    console.log(dia + " " +  min + " " + max)
+
     document.getElementById("numdia0").innerHTML = dia;
     
     document.getElementById("mindia0").innerHTML = min;
