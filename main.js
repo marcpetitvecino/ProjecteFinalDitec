@@ -4,30 +4,33 @@ function weather() {
 
     $.getJSON("https://dataservice.accuweather.com/forecasts/v1/daily/5day/"+ciutat+"?apikey=pdjxEIPtWE2tmrCA8sJ0H5NXh7zOEl5s&language=es&metric=true",function(data) {
 
-    var diallarg = data["DailyForecasts"]["0"]["Date"];
-    var dia = diallarg.substring(0,10);
-    var min = data["DailyForecasts"]["0"]["Temperature"]["Minimum"]["Value"];
-    var max = data["DailyForecasts"]["0"]["Temperature"]["Maximum"]["Value"];
-    var estatdia = data["DailyForecasts"]["0"]["Day"]["Icon"];
-    var fraseestatdia = data["DailyForecasts"]["0"]["Day"]["IconPhrase"];
-    var estatnit = data["DailyForecasts"]["0"]["Night"]["Icon"];
-    var fraseestatnit = data["DailyForecasts"]["0"]["Night"]["IconPhrase"];
+    for (i = 0; i < 5; i++) {
 
-    console.log(dia + " " +  min + " " + max)
+        var diallarg = data["DailyForecasts"][i]["Date"];
+        var dia = diallarg.substring(0,10);
+        var min = data["DailyForecasts"][i]["Temperature"]["Minimum"]["Value"];
+        var max = data["DailyForecasts"][i]["Temperature"]["Maximum"]["Value"];
+        var estatdia = data["DailyForecasts"][i]["Day"]["Icon"];
+        var fraseestatdia = data["DailyForecasts"][i]["Day"]["IconPhrase"];
+        var estatnit = data["DailyForecasts"][i]["Night"]["Icon"];
+        var fraseestatnit = data["DailyForecasts"][i]["Night"]["IconPhrase"];
 
-    document.getElementById("numdia0").innerHTML = dia;
-    
-    document.getElementById("mindia0").innerHTML = min;
 
-    document.getElementById("maxdia0").innerHTML = max;
+        document.getElementById("numdia" + i).innerHTML = dia;
+        
+        document.getElementById("mindia" + i).innerHTML = min;
 
-    document.getElementById("estatdia0").innerHTML = estatdia;
+        document.getElementById("maxdia" + i).innerHTML = max;
 
-    document.getElementById("fraseestatdia0").innerHTML = fraseestatdia;
+        document.getElementById("estatdia" + i).innerHTML = estatdia;
 
-    document.getElementById("estatnit0").innerHTML = estatnit;
+        document.getElementById("fraseestatdia" + i).innerHTML = fraseestatdia;
 
-    document.getElementById("fraseestatnit0").innerHTML = fraseestatnit;
+        document.getElementById("estatnit" + i).innerHTML = estatnit;
+
+        document.getElementById("fraseestatnit" + i).innerHTML = fraseestatnit;
+
+        }
 
     });
 
