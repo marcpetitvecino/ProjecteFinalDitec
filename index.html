@@ -6,11 +6,12 @@
     <title>Previsió del temps</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script src="main.js"></script>
 </head>
 <body>
     
     <p id="titol">Previsió del temps</p>
-    <select name="ciutats" id="ciutats" onselect="weather()">
+    <select name="ciutats" id="ciutats" onload="weather()">
 
         <option value="307297" id="barcelona">Barcelona</option>
         
@@ -54,5 +55,4 @@
     </div>
 
 </body>
-    <script src="main.js"></script>
 </html>
