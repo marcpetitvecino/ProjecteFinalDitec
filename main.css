@@ -1,5 +1,14 @@
 div {
 
     border: 2px solid black;
+    display: flex;
+    justify-content: space-evenly;
+
+}
+#estat {
+
+    display: flex;
+    flex-direction: column;
+    border: none;
 
 }
