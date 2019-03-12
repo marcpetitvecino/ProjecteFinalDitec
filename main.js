@@ -1,10 +1,8 @@
 function weather() {
-
-    var ciutat = document.getElementById("ciutats").value;
-
-    $.getJSON("https://dataservice.accuweather.com/forecasts/v1/daily/5day/"+ciutat+"?apikey=pdjxEIPtWE2tmrCA8sJ0H5NXh7zOEl5s&language=es&metric=true",function(data) {
-
+     
+     var ciutat = document.getElementById("ciutats").value;
     
+    $.getJSON("https://dataservice.accuweather.com/forecasts/v1/daily/5day/"+ciutat+"?apikey=pdjxEIPtWE2tmrCA8sJ0H5NXh7zOEl5s&language=es&metric=true",function(data) {
 
     for (i = 0; i < 5; i++) {
 

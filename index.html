@@ -1,137 +1,150 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Previsió del temps</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
-    <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-    <script src="main.js"></script>
-</head>
-<body>
-    
-    <p id="titol">Previsió del temps</p>
-    <select name="ciutats" id="ciutats">
 
-        <option value="307297" id="barcelona">Barcelona</option>
-        <option value="304371" id="mataro">Mataró</option>
-        <option value="304357" id="girona">Girona</option>
+   <head>
 
-    </select>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <title>Previsió del temps</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+      <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+      <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+      <script src="main.js"></script>
 
-    <button onclick="weather()">Go</button>
+   </head>
 
-    <div id="dia0">
+   <body onload="weather()">
 
-        <p id="numdia0"></p>
-        <p id="mindia0"></p>
-        <p id="maxdia0"></p>
+      <div class="jumbotron text-center">
 
-        <div id="estat">
+         <p id="titol">Previsió del temps</p>
 
-        <p id="estatdia0"></p>
-        <p id="fraseestatdia0"></p>
+         <select name="ciutats" id="ciutats" onchange="weather()">
 
-        </div>
+            <option value="307297" id="barcelona">Barcelona</option>
+            <option value="304371" id="mataro">Mataró</option>
+            <option value="304357" id="girona">Girona</option>
+            <option value="308526" id="madrid">Madrid</option>
+            <option value="328328" id="londres">Londres</option>
+            <option value="294021" id="moscu">Moscú</option>
+            <option value="10178" id="berlin">Berlín</option>
 
-        <div id="estat">
+         </select>
 
-            <p id="estatnit0"></p>
-            <p id="fraseestatnit0"></p>
-        
-        </div>
+      </div>
 
-    </div>
+      <div class="container">
 
-    <div id="dia1">
+         <div id="dia0" class="item">
 
-        <p id="numdia1"></p>
-        <p id="mindia1"></p>
-        <p id="maxdia1"></p>
+            <p id="numdia0"></p>
+            <p id="maxdia0"></p>
+            <p id="mindia0"></p>
+            <div id="estat">
 
-        <div id="estat">
+               <p id="estatdia0"></p>
+               <p id="fraseestatdia0"></p>
 
-            <p id="estatdia1"></p>
-            <p id="fraseestatdia1"></p>
-    
-        </div>
-    
-        <div id="estat">
+            </div>
 
-            <p id="estatnit1"></p>
-            <p id="fraseestatnit1"></p>
-                
-        </div>
+            <div id="estat">
 
-    </div>
+               <p id="estatnit0"></p>
+               <p id="fraseestatnit0"></p>
 
-    <div id="dia2">
+            </div>
 
-        <p id="numdia2"></p>
-        <p id="mindia2"></p>
-        <p id="maxdia2"></p>
+         </div>
 
-        <div id="estat">
+         <div id="dia1" class="item">
 
-            <p id="estatdia2"></p>
-            <p id="fraseestatdia2"></p>
-    
-        </div>
-    
-        <div id="estat">
-    
-            <p id="estatnit2"></p>
-            <p id="fraseestatnit2"></p>
-                
-        </div>
+            <p id="numdia1"></p>
+            <p id="maxdia1"></p>
+            <p id="mindia1"></p>
+            <div id="estat">
 
-    </div>
+               <p id="estatdia1"></p>
+               <p id="fraseestatdia1"></p>
 
-    <div id="dia3">
+            </div>
 
-        <p id="numdia3"></p>
-        <p id="mindia3"></p>
-        <p id="maxdia3"></p>
+            <div id="estat">
 
-    
+               <p id="estatnit1"></p>
+               <p id="fraseestatnit1"></p>
 
-    <div id="estat">
+            </div>
 
-        <p id="estatdia3"></p>
-        <p id="fraseestatdia3"></p>
+         </div>
 
-    </div>
+         <div id="dia2" class="item">
 
-    <div id="estat">
+            <p id="numdia2"></p>
+            <p id="maxdia2"></p>
+            <p id="mindia2"></p>
 
-        <p id="estatnit3"></p>
-        <p id="fraseestatnit3"></p>
+            <div id="estat">
 
-    </div>
+               <p id="estatdia2"></p>
+               <p id="fraseestatdia2"></p>
 
-    </div>
+            </div>
 
-    <div id="dia4">
+            <div id="estat">
 
-        <p id="numdia4"></p>
-        <p id="mindia4"></p>
-        <p id="maxdia4"></p>
+               <p id="estatnit2"></p>
+               <p id="fraseestatnit2"></p>
 
+            </div>
 
-    <div id="estat">
+         </div>
 
-        <p id="estatdia4"></p>
-        <p id="fraseestatdia4"></p>
+         <div id="dia3" class="item">
 
-    </div>
+            <p id="numdia3"></p>
+            <p id="maxdia3"></p>
+            <p id="mindia3"></p>
 
-    <div id="estat">
+            <div id="estat">
 
-        <p id="estatnit4"></p>
-        <p id="fraseestatnit4"></p>
+               <p id="estatdia3"></p>
+               <p id="fraseestatdia3"></p>
 
-    </div>
+            </div>
 
-</body>
+            <div id="estat">
+
+               <p id="estatnit3"></p>
+               <p id="fraseestatnit3"></p>
+
+            </div>
+
+         </div>
+
+         <div id="dia4" class="item">
+
+            <p id="numdia4"></p>
+            <p id="maxdia4"></p>
+            <p id="mindia4"></p>
+
+            <div id="estat">
+
+               <p id="estatdia4"></p>
+               <p id="fraseestatdia4"></p>
+
+            </div>
+
+            <div id="estat">
+
+               <p id="estatnit4"></p>
+               <p id="fraseestatnit4"></p>
+
+            </div>
+
+         </div>
+
+      </div>
+
+   </body>
 </html>
