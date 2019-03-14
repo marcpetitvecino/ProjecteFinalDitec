@@ -8,6 +8,8 @@ function weather() {
 
         var diallarg = data["DailyForecasts"][i]["Date"];
         var dia = diallarg.substring(0,10);
+        var dia = new Date();
+        var datestring = (dia.getDate()+i) + "-" + (dia.getMonth()+1) + "-" + dia.getFullYear();
         var min = data["DailyForecasts"][i]["Temperature"]["Minimum"]["Value"];
         var max = data["DailyForecasts"][i]["Temperature"]["Maximum"]["Value"];
         var estatdia = data["DailyForecasts"][i]["Day"]["Icon"];
@@ -19,7 +21,7 @@ function weather() {
         var imatgenit = document.createElement("img");
         imatgenit.src = "img/"+estatnit+".png";
 
-        document.getElementById("numdia" + i).innerHTML = dia;
+        document.getElementById("numdia" + i).innerHTML = datestring;
         
         document.getElementById("mindia" + i).innerHTML = min;
 

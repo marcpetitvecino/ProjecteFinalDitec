@@ -7,6 +7,7 @@
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <title>Previsió del temps</title>
       <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="icon" type="image/png" href="img/favicon.png">
       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
       <link rel="stylesheet" type="text/css" media="screen" href="main.css">
       <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
@@ -16,7 +17,7 @@
 
    <body onload="weather()">
 
-      <div class="jumbotron text-center">
+      <div class="jumbotron text-center" id="header">
 
          <p id="titol">Previsió del temps</p>
 
@@ -39,17 +40,29 @@
          <div id="dia0" class="item">
 
             <p id="numdia0"></p>
-            <p id="maxdia0"></p>
-            <p id="mindia0"></p>
-            <div id="estat">
 
-               <p id="estatdia0"></p>
-               <p id="fraseestatdia0"></p>
+            <div id="temp">
+
+               <p id="maxdia0"></p>º<img id="tempimg" src="img/alta.png" alt="termometro caliente">
+
+            </div>
+
+
+            <div id="temp">
+
+               <p id="mindia0"></p>º<img id="tempimg" src="img/baixa.png" alt="termometro frio">
 
             </div>
 
             <div id="estat">
+               <p id="nomestat">Día: </p>
+               <p id="estatdia0"></p>
+               <p id="fraseestatdia0"></p>
 
+            </div>
+            <br>
+            <div id="estat">
+               <p id="nomestat">Noche: </p>
                <p id="estatnit0"></p>
                <p id="fraseestatnit0"></p>
 
@@ -60,17 +73,28 @@
          <div id="dia1" class="item">
 
             <p id="numdia1"></p>
-            <p id="maxdia1"></p>
-            <p id="mindia1"></p>
-            <div id="estat">
+            
+            <div id="temp">
+               
+               <p id="maxdia1"></p>º<img id="tempimg" src="img/alta.png" alt="termometro caliente">
+            
+            </div>
 
-               <p id="estatdia1"></p>
-               <p id="fraseestatdia1"></p>
+            <div id="temp">
+
+               <p id="mindia1"></p>º<img id="tempimg" src="img/baixa.png" alt="termometro frio">
 
             </div>
 
             <div id="estat">
+               <p id="nomestat">Día: </p>
+               <p id="estatdia1"></p>
+               <p id="fraseestatdia1"></p>
 
+            </div>
+            <br>
+            <div id="estat">
+               <p id="nomestat">Noche: </p>
                <p id="estatnit1"></p>
                <p id="fraseestatnit1"></p>
 
@@ -81,18 +105,28 @@
          <div id="dia2" class="item">
 
             <p id="numdia2"></p>
-            <p id="maxdia2"></p>
-            <p id="mindia2"></p>
 
-            <div id="estat">
+            <div id="temp">
 
-               <p id="estatdia2"></p>
-               <p id="fraseestatdia2"></p>
+               <p id="maxdia2"></p>º<img id="tempimg" src="img/alta.png" alt="termometro caliente">
+
+            </div>
+            
+            <div id="temp">
+               
+               <p id="mindia2"></p>º<img id="tempimg" src="img/baixa.png" alt="termometro frio">
 
             </div>
 
             <div id="estat">
+               <p id="nomestat">Día: </p>
+               <p id="estatdia2"></p>
+               <p id="fraseestatdia2"></p>
 
+            </div>
+            <br>
+            <div id="estat">
+               <p id="nomestat">Noche: </p>
                <p id="estatnit2"></p>
                <p id="fraseestatnit2"></p>
 
@@ -103,18 +137,28 @@
          <div id="dia3" class="item">
 
             <p id="numdia3"></p>
-            <p id="maxdia3"></p>
-            <p id="mindia3"></p>
+            
+            <div id="temp">
 
-            <div id="estat">
+               <p id="maxdia3"></p>º<img id="tempimg" src="img/alta.png" alt="termometro caliente">
 
-               <p id="estatdia3"></p>
-               <p id="fraseestatdia3"></p>
+            </div>
+
+            <div id="temp">
+
+               <p id="mindia3"></p>º<img id="tempimg" src="img/baixa.png" alt="termometro frio">
 
             </div>
 
             <div id="estat">
+               <p id="nomestat">Día: </p>
+               <p id="estatdia3"></p>
+               <p id="fraseestatdia3"></p>
 
+            </div>
+            <br>
+            <div id="estat">
+               <p id="nomestat">Noche: </p>
                <p id="estatnit3"></p>
                <p id="fraseestatnit3"></p>
 
@@ -125,18 +169,28 @@
          <div id="dia4" class="item">
 
             <p id="numdia4"></p>
-            <p id="maxdia4"></p>
-            <p id="mindia4"></p>
 
-            <div id="estat">
+            <div id="temp">
 
-               <p id="estatdia4"></p>
-               <p id="fraseestatdia4"></p>
+               <p id="maxdia4"></p>º<img id="tempimg" src="img/alta.png" alt="termometro caliente">
+
+            </div>
+            
+            <div id="temp">
+
+               <p id="mindia4"></p>º<img id="tempimg" src="img/baixa.png" alt="termometro frio">
 
             </div>
 
             <div id="estat">
+               <p id="nomestat">Día: </p>
+               <p id="estatdia4"></p>
+               <p id="fraseestatdia4"></p>
 
+            </div>
+            <br>
+            <div id="estat">
+               <p id="nomestat">Noche: </p>
                <p id="estatnit4"></p>
                <p id="fraseestatnit4"></p>
 

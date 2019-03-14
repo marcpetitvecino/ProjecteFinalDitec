@@ -1,8 +1,54 @@
+body {
+
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+#header {
+
+    padding-top: 0px;
+
+}
+
 #titol {
 
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
+    font-size: 38px;
+
+}
+#ciutats {
+
+    width: 300px;
+    height: 50px;
+    margin-bottom: -20px;
     font-size: 26px;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+#nomestat {
+
+    font-weight: bold;
+
+}
+#numdia0, #numdia1, #numdia2, #numdia3, #numdia4 {
+
+    margin-top: 15px;
+    font-weight: bold;
+
+}
+#tempimg {
+
+    width: 25px;
+    height: 25px;
+
+}
+
+#temp {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 
 }
 
@@ -12,18 +58,23 @@
     display: flex;
     justify-content: space-evenly;
     text-align: center;
+    border-radius: 10px;
+    margin-bottom: 10px;
 
 }
 .item {
 
-}
-/*FLEXBOX*/
-
-#estat {
 
     display: flex;
     flex-direction: column;
     border: none;
     margin: 0px;
+    width: 225px;
+
+}
+.jumbotron {
+
+    margin-bottom: 5px;
+    padding-bottom: 35px;
 
 }
